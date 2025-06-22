@@ -24,7 +24,7 @@ export const Layout = ({user, onLogout}) => {
                 //  navigate("/login");
             }
 
-            const {data} = await axios.get("http://localhost:4000/api/tasks/gp", {
+            const {data} = await axios.get("https://task-management-2b5f.onrender.com/api/tasks/gp", {
                 headers: {Authorization: `Bearer ${token}`},
             });
 
