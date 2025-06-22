@@ -4,7 +4,7 @@ import {Calendar, CheckCircle, Clock, MoreVertical} from "lucide-react";
 import axios from "axios";
 import {format, isToday} from "date-fns";
 import {TaskModel} from "./TaskModel";
-const API_BASE = "http://localhost:4000/api/tasks";
+const API_BASE = "https://task-management-2b5f.onrender.com/api/tasks";
 
 export const TaskItem = ({tasks, onRefresh, showCompleteCheckBox = true, onEdit, onLogout}) => {
     const [showMenu, setShowMenu] = useState(false);
