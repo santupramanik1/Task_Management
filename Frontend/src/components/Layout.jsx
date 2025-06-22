@@ -54,13 +54,7 @@ export const Layout = ({user, onLogout}) => {
         fetchTasks();
     }, [fetchTasks]);
 
-    //
-    // const stats = useMemo(() => {
-    //     const completedTasks = tasks.filter((t) => {
-    //         t.completed == true ||
-    //             t.completed == 1 ||
-    //             (typeof (t.completed === "string" && t.completed.toLowerCase() === 'yes'))
-    //     }).length
+    
 
     const stats = useMemo(() => {
         const completedTasks = tasks.filter(
