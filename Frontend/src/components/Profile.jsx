@@ -16,7 +16,7 @@ import {
 import {ChevronLeft, Lock, LogOut, Save, Shield, UserCircle} from "lucide-react";
 import axios from "axios";
 
-const API_URL = "http://localhost:4000";
+const API_URL = "https://task-management-2b5f.onrender.com";
 
 export const Profile = ({currentUser, setCurrentUser, onLogout}) => {
     const navigate = useNavigate();
