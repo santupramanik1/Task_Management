@@ -25,7 +25,7 @@ import {TaskItem} from "../components/TaskItem";
 import axios from "axios";
 import {TaskModel} from "../components/TaskModel";
 
-const API_BASE = "http://localhost:4000/api/tasks";
+const API_BASE = "https://task-management-2b5f.onrender.com";
 export const Dashboard = () => {
     const {tasks, refreshTasks, onLogout} = useOutletContext();
     const [showModel, setShowModel] = useState(false);
