@@ -65,37 +65,65 @@ This project was engineered to be clean, stable, and completely modular under a 
 
 Get this project running on your local machine in three steps:
 
+Here is the clean, fixed markdown code block with proper indentation, clear headings, and correct code tags. Copy and paste this directly into your file:
+
+```markdown
 ### 1. Clone the Project
 ```bash
 git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git)
 cd YOUR_REPO_NAME
 
-## Setup the Backend
-Bash
+```
+
+### 2. Setup the Backend
+
+```bash
 cd Backend
 npm install
-Create a file named .env inside the Backend folder and add your credentials:
 
-Code snippet
+```
+
+Create a file named `.env` inside the `Backend` folder and add your credentials:
+
+```env
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key_here
 NODE_ENV=development
+
+```
+
 Start the backend development server:
 
-Bash
+```bash
 npm run dev
-3. Setup the Frontend
+
+```
+
+### 3. Setup the Frontend
+
 Open a new terminal window, navigate back to the root directory, and run:
 
-Bash
+```bash
 cd Frontend
 npm install
-Create a file named .env inside the Frontend folder and link your local backend URL:
 
-Code snippet
+```
+
+Create a file named `.env` inside the `Frontend` folder and link your local backend URL:
+
+```env
 VITE_API_URL=http://localhost:5000
+
+```
+
 Start the frontend user interface:
 
-Bash
+```bash
 npm run dev
+
+```
+
+```
+
+```
