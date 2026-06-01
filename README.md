@@ -65,12 +65,10 @@ This project was engineered to be clean, stable, and completely modular under a 
 
 Get this project running on your local machine in three steps:
 
-Here is the clean, fixed markdown code block with proper indentation, clear headings, and correct code tags. Copy and paste this directly into your file:
-
 ```markdown
 ### 1. Clone the Project
 ```bash
-git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git)
+git clone git@github.com:santupramanik1/Task_Management.git
 cd YOUR_REPO_NAME
 
 ```
@@ -89,14 +87,12 @@ Create a file named `.env` inside the `Backend` folder and add your credentials:
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key_here
-NODE_ENV=development
-
 ```
 
 Start the backend development server:
 
 ```bash
-npm run dev
+node server.js
 
 ```
 
@@ -122,8 +118,5 @@ Start the frontend user interface:
 ```bash
 npm run dev
 
-```
-
-```
 
 ```
