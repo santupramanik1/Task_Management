@@ -29,23 +29,25 @@ An elegant, production-ready, full-stack Task Management application built to ma
 * **Reactive Toast Infrastructure:** Integrated `react-toastify` notification layer providing instant, non-intrusive feedback on server communications, validation errors, and state mutations.
 
 ---
+## 🧠 System Architecture, Tradeoffs, & Engineering Assumptions
 
-## 🧠 Architectural Decisions, Assumptions, & Tradeoffs
+To deliver a production-ready system within a highly compressed 3-to-4 hour window, architectural choices were guided by two core pillars: **absolute system stability** and a **strict separation of concerns**. 
+
+---
 
 ### 🏛️ Technical & Architectural Decisions
-* **Mandatory AI-Assisted Backend:** In strict adherence to the assignment guidelines regarding AI assistance, I designed and built a dedicated custom backend rather than relying purely on frontend-mocked states.
-* **Strict Separation of Concerns (SoC):** The backend is architected using a decoupled MVC-style layout (`routes/`, `controllers/`, `config/`, `middleware/`). This structure guarantees high maintainability and isolates routing logic from the core database operations.
-* **Standard JWT Lifecycle Over Wrappers:** I bypassed heavy third-party authentication wrappers (like Passport.js) to implement standard Google-style JWT authentication manually. Tokens are stored in `localStorage` and dispatched via an Axios authorization interceptor header (`Authorization: Bearer <token>`).
-* **Serverless Node.js Execution:** Deployed the Express layer to Vercel as modular Serverless Functions (`vercel.json`), exporting the application instance (`export default app`) directly rather than managing raw persistent port listeners.
 
-### 🔄 Engineering Tradeoffs
-* **Button/Dropdown UI vs. Drag-and-Drop:** To guarantee a strict completion timeline (under 4 hours) and avoid layout-shift bugs on mobile screens, I implemented standard, precise button-based stage transitions. This prioritized absolute stability and ironclad responsiveness over an intricate drag-and-drop third-party package.
-* **Text-Only Modals:** Kept modal interfaces entirely content-driven and lightweight. Omitting complex media uploads or rich-text editors dramatically accelerated request-response roundtrips and eliminated unnecessary payload overhead.
+> 💡 **Architectural Strategy:** The entire platform is built around a decoupled full-stack architecture, optimizing for modular scale, easy debugging, and predictable data flow.
 
-### 📋 Technical Assumptions
-* **User Data Isolation:** It is assumed that all task items are strictly private. The database utilizes a relational reference (`user_id` bound to the `Task` schema) ensuring that tasks are filtered at the database level and can only be accessed via an authenticated user token context.
-* **Fixed Workflow Pipeline:** The workspace pipeline is assumed to follow a standard MVP "Todo ➡️ In Progress ➡️ Done" framework without custom user-defined stages.
-
+* **Mandatory AI-Assisted Full-Stack Pipeline:** Adhering strictly to the assignment criteria regarding AI-assisted workflows, I engineered a dedicated custom Node.js/Express backend rather than relying on brittle, frontend-mocked static state storage. 
+* **Strict Separation of Concerns (SoC):** The backend bypasses chaotic single-file scripts in favor of a clean, decoupled MVC pattern:
+  * 📁 `config/` — Isolated database connectivity initialization.
+  * 📁 `middleware/` — Request filtration, payload parsing, and authentication interceptors.
+  * 📁 `routes/` — Explicit endpoint mapping.
+  * 📁 `controllers/` — Core transactional business logic.
+* **Standard JWT Lifecycle Over Third-Party Wrappers:** I bypassed heavy, opinionated authentication frameworks (like Passport.js) to implement standard, lightweight **JSON Web Token (JWT)** auth manually. Tokens are managed securely in `localStorage` and automatically injected into outbound requests via an Axios authorization header interceptor:
+  ```javascript
+  Authorization: Bearer <token>
 ---
 
 ## 🛠️ Tech Stack & Ecosystem
