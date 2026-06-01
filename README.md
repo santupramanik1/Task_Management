@@ -1,18 +1,32 @@
-# 🚀 TaskFlow | Full-Stack Task Management Platform
+# 🚀 TaskPilot | Full-Stack Task Management Platform
 
 An elegant, production-ready, full-stack Task Management application built to manage workflows seamlessly across multiple stages. Built with the **MERN Stack** (MongoDB, Express, React, Node.js), this platform features robust custom JWT authentication, modular serverless architecture, and a fully responsive user interface.
 
 ### 🌐 Live Deployments
-* **Frontend Client:** [👉 Click Here to View Live App](YOUR_FRONTEND_VERCEL_URL)
-* **Backend API Base:** [🔗 API Endpoint Link](YOUR_BACKEND_VERCEL_URL)
+* **Frontend Client:** https://task-manager-tau-snowy-58.vercel.app/
+* **Backend API Base:** https://task-manager-api-one-beta.vercel.app/
 
 ---
 
-## ⚡ Key Features
-* **Full-Stack Authentication:** Secure user registration and login utilizing custom JSON Web Tokens (JWT) and `bcrypt` password hashing.
-* **Persistent Sessions:** Automated session restoration using token validation endpoints (`/api/user/me`) via React lifecycle hooks.
-* **State-Driven Kanban Board:** Responsive three-stage pipeline (Todo ➡️ In Progress ➡️ Done) optimized for cross-device usage.
-* **Fail-Safe UI States:** Comprehensive loading animations, error boundary state tracking, and reactive notification toasts via `react-toastify`.
+## ⚡ Core Engineering & Platform Features
+
+### 🔐 Robust Identity & Session Management
+* **Secure Authentication Pipeline:** Multi-step user authentication featuring deterministic data salting and password hashing via `bcrypt` alongside secure stateless token creation with JSON Web Tokens (JWT).
+* **Automated Session Restoration:** Zero-friction UX utilizing React lifecycle hooks to query the `/api/user/me` endpoint. Valid tokens automatically bypass the login screen and instantly re-hydrate the global user context.
+* **Granular User Profiles:** Dedicated profile dashboard allowing authenticated users to dynamically update personal accounts, modify display configurations, and securely cycle account passwords.
+
+### 📋 High-Performance Kanban & Task Management
+* **Full CRUD Operations:** Seamless, real-time Create, Read, Update, and Delete actions connected to optimized MongoDB document models.
+* **State-Driven Workflow Pipeline:** Highly visual three-stage pipeline (Todo ➡️ In Progress ➡️ Done) leveraging local state synchronization to eliminate artificial interface delays.
+* **Progress Telemetry Indicators:** Real-time completion analytics tracking total tasks against current status metrics (e.g., Pending vs. Completed) to present a high-level view of workflow velocity.
+
+### 🎛️ Advanced Data Engineering (Sorting & Prioritization)
+* **Chronological Sorting Engines:** Dynamic client-side sorting capabilities enabling users to instantly pivot their workspace arrays between `Newest First` (high-velocity tracking) and `Oldest First` (backlog management).
+* **Multi-Tier Prioritization Matrix:** Task schemas enriched with structural priority tagging (e.g., High, Medium, Low), allowing users to organize tasks by urgency and prevent bottlenecking.
+
+### 🎨 Production-Grade UX & Resilience
+* **Fail-Safe UI States:** Full-coverage loading spinners and contextual fallback states that gracefully handle slow network conditions.
+* **Reactive Toast Infrastructure:** Integrated `react-toastify` notification layer providing instant, non-intrusive feedback on server communications, validation errors, and state mutations.
 
 ---
 
