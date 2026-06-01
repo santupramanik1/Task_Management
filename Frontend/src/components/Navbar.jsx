@@ -6,12 +6,6 @@ import { useState } from 'react';
 
 export const Navbar = ({user={},onLogout}) => {
 
-    // for testing
-    // const user = {
-    //     name: "Santu",
-    //     email: "santu700141@gmail.com"
-    // }
-
     const menuRef = useRef(null)
     const [menuOpen, setMenuOpen] = useState(false)
     const nevigate = useNavigate()

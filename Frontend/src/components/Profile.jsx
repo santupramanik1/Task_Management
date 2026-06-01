@@ -109,7 +109,7 @@ export const Profile = ({currentUser, setCurrentUser, onLogout}) => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 border">
+        <div className="min-h-screen bg-gray-50 ">
             <ToastContainer position="top-center" autoClose={3000}></ToastContainer>
             <div className="max-w-4xl p-6 mx-auto">
                 <button className={` ${BACK_BUTTON} cursor-pointer`} onClick={() => navigate(-1)}>

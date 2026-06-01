@@ -92,7 +92,7 @@ export const Sidebar = ({user, tasks}) => {
                                         target="_blank"
                                         className="block mt-2 text-sm text-purple-500 hover:underline"
                                     >
-                                        Visit CodePaglu Services
+                                        Visit Services
                                     </a>
                                 </div>
                             </div>
