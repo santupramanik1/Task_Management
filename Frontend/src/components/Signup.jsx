@@ -3,7 +3,7 @@ import { UserPlus } from 'lucide-react';
 import axios from "axios"
 import { BUTTONCLASSES, FIELDS, INPUT_WRAPPER, Inputwrapper, MESSAGE_ERROR, MESSAGE_SUCCESS } from "../assets/dummy"
 
-const API_URL = "https://task-management-2b5f.onrender.com"
+const API_URL = "https://task-manager-api-one-beta.vercel.app"
 const INITIAL_FORM_DATA = { name: "", email: "", password: "" }
 
 export const Signup = ({ onSwitchMode }) => {

@@ -19,7 +19,7 @@ export const Login = ({ onSubmit, onSwitchMode }) => {
 
 
   const navigate = useNavigate();
-  const url = "https://task-management-2b5f.onrender.com";
+  const url = "https://task-manager-api-one-beta.vercel.app";
 
   useEffect(() => {
     const token = localStorage.getItem('token')

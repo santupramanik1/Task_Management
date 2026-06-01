@@ -3,7 +3,7 @@ import {baseControlClasses, DEFAULT_TASK, priorityStyles} from "../assets/dummy"
 import {AlignLeft, Calendar, CheckCircle, Flag, PlusCircle, Save, X} from "lucide-react";
 import {data} from "react-router-dom";
 
-const API_BASE = "https://task-management-2b5f.onrender.com/api/tasks";
+const API_BASE = "https://task-manager-api-one-beta.vercel.app/api/tasks";
 export const TaskModel = ({isOpen, onClose, taskToEdit, onSave, onLogout, onRefresh}) => {
     const [taskData, setTaskData] = useState(DEFAULT_TASK);
     const [loading, setLoading] = useState(false);
